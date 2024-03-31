@@ -1,23 +1,51 @@
 <!DOCTYPE html>
+
+<!-- LINKS -->
+<!-- 
+    We can link to other pages in html by using the <a></a> tags 
+
+    href="" is an atribute that defines which page will be linked to
+
+    target="_self" will open the page in the tab we currently are in
+    target="_blank" will open the page in another tab
+
+    A little bit of cybersec!!!
+
+    rel="noopener noreferrer" does two things:
+    1) prevents page we linked to from knowing we have a link to their page (noreferrer atribute)
+    2) prevents page we linked to from making changes to our page (noopener atribute)
+        This last property is important to prevent TABNABBING -> a pishing attack that changes our page to one similar
+        so that we give away our credentials/other things
+
+-->
+
+<!-- IMAGES -->
+<!-- 
+    <img src="" alt="">
+    
+    The src atribute is how we define what image will be loaded (can use relative or absolute links)
+
+    The alt atribute is a text embedded with the image in case it doesnt load/for screen scanners
+
+ -->
+
 <html lang="en">
+
     <head>
-
         <meta charset="UTF-8">
-
-        <title>Images and Links</title>
-
+        <title>Homepage</title>
     </head>
 
     <body>
-
         <h1>Homepage</h1>
 
-        <a href="https://www.theodinproject.com/lessons/foundations-links-and-images" target="_blank" rel="noopener noreferrer">click me</a>
-        <!-- target="_blank" makes it so the link opens in another tab -->
-        <!-- rel="noopener noreferrer" makes it so that the opened page cant access our page or know we accessed it -->
+        <a href="https://www.theodinproject.com/about" target="_blank" rel="noopener noreferrer">link</a>
 
-        <a href="./pages/about.html">About</a>
-        <!-- since about.html is local, we only need to specify its directory -->
+        <a href="./pages/about.html" target="_blank">about</a>
 
+        <a href="./pages/images.html" target="_blank">image testing</a>
+
+        <img src="./images/pfp1.jpg" alt="a random image" height="310" width="310">
     </body>
+
 </html>
